@@ -24,7 +24,12 @@ L.DNC.Geo = L.Class.extend({
         ],
         createsLayer: true
     },
-
+	centroid: {
+        minFeatures: 1,
+        maxFeatures: 2,
+        description: 'Takes one or more features and calculates the centroid using the arithmetic mean of all vertices. This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.',
+        createsLayer: true
+    },
     union: {
         minFeatures: 2,
         maxFeatures: 2,
